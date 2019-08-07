@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://pangshuxin.github.io/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Aug 2019 21:30:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://pangshuxin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://pangshuxin.github.io/post/blog/</link>
+      <pubDate>Wed, 07 Aug 2019 21:30:07 +0800</pubDate>
+      
+      <guid>https://pangshuxin.github.io/post/blog/</guid>
+      <description>近期使用python处理数据，使用python3打开一个txt文件
+file1 = open(&amp;ldquo;wenjianming.txt&amp;rdquo;,&amp;lsquo;r&amp;rsquo;) data = file1.readlines() i = &amp;ldquo;&amp;rdquo; for i in data: print(i) 报错如下：
+UnicodeDecodeError: &amp;lsquo;utf-8&amp;rsquo; codec can&amp;rsquo;t decode byte 0xb1 in position 0: invalid start byte
+是编码的问题，所以将编码改成gbk试了一下
+file1 = open(&amp;ldquo;31省市居民家庭消费水平-city.txt&amp;rdquo;,&amp;lsquo;r&amp;rsquo;,&amp;lsquo;gbk&amp;rsquo;) 报错如下:
+TypeError: an integer is required (got type str)
+又继续百度，查了一下open函数：
+open(file, mode=&amp;lsquo;r&amp;rsquo;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None) 也就是说在encoding参数前面还得有个buffering，参数值要是个整数，所以改成以下形式：
+file1 = open(&amp;ldquo;31省市居民家庭消费水平-city.txt&amp;rdquo;,&amp;lsquo;r&amp;rsquo;,1,&amp;lsquo;gbk&amp;rsquo;) data = file1.readlines() i = &amp;ldquo;&amp;rdquo; for i in data: print(i)
+就能够正常输出汉字了 版权声明：本文为CSDN博主「地信小心」的原创文章，遵循CC 4.0 by-sa版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.</description>
+    </item>
+    
+  </channel>
+</rss>
